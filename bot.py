@@ -4,6 +4,10 @@ from discord import app_commands
 import json
 import os
 from dotenv import load_dotenv
+import Flask
+from threading import Thread
+from flask import Flask
+
 load_dotenv()
 
 with open('config.json') as f:
@@ -187,3 +191,14 @@ async def on_raw_reaction_remove(payload: discord.RawReactionActionEvent):
                 return
 
 bot.run(os.getenv("DISCORD_BOT_TOKEN"))
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot está online!"
+
+def run_web():
+    app.run(host='0.0.0.0', port=8080)
+
+# Inicia a thread do Flask
+Thread(target=run_web).start()
