@@ -4,7 +4,6 @@ from discord import app_commands
 import json
 import os
 from dotenv import load_dotenv
-import Flask
 from threading import Thread
 from flask import Flask
 
