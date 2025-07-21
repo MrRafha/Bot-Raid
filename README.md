@@ -94,7 +94,7 @@ python bot.py
 Ao adicionar o bot, use esta URL:
 
 ```
-https://discord.com/oauth2/authorize?client_id=SEU_CLIENT_ID&scope=bot+applications.commands&permissions=274878116672
+https://discord.com/oauth2/authorize?client_id=1395897383229067285&permissions=139855226960&integration_type=0&scope=bot+applications.commands
 ```
 
 Essa URL permite:
