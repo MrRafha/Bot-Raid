@@ -189,7 +189,6 @@ async def on_raw_reaction_remove(payload: discord.RawReactionActionEvent):
                 await message.edit(embed=embed)
                 return
 
-bot.run(os.getenv("DISCORD_BOT_TOKEN"))
 app = Flask('')
 
 @app.route('/')
@@ -201,3 +200,4 @@ def run_web():
 
 # Inicia a thread do Flask
 Thread(target=run_web).start()
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
