@@ -1,0 +1,22 @@
+{
+  "token": "ENV_DISCORD_BOT_TOKEN",
+  "guild_id": 1359650048379584532,
+  "permissao_criar_raid": "Raid Maker",
+  "roles": {
+    "MainTank": { "emoji":"<:MainTank:1395910048705675324>", "nome": "Main Tank" },
+    "OffTankGolem": { "emoji":"<:OffTankGolem:1395910085871403120>", "nome": "Off Tank GOlem" },
+    "MainHeal": { "emoji": "<:MAINHEAL:1395910203282686113>", "nome": "Main Healer" },
+    "Silence": { "emoji": "<:Silence:1395910199294034010>", "nome": "Silence" },
+    "Paratempo": { "emoji": "<:Paratempo:1395910196605223062>", "nome": "Paratempo" },
+    "Incubus": { "emoji": "<:Incubus:1395910193413492818>", "nome": "Incubus" },
+    "Bruxo": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Bruxo" },
+    "QuebraReinos": { "emoji": "<:QUEBRAREINOS:1395920798367219752>", "nome": "Quebra Reinos" },
+    "RaizHealer": { "emoji": "<:RAIZHEALER:1395910186324987954>", "nome": "Raiz Healer" },
+    "Crosta": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" },
+    "Aguia": { "emoji": "<:AGUIA:1395910180931371008>", "nome": "Aguia" },
+    "Repetidor": { "emoji": "<:REPETIDOR:1395921503165616238>", "nome": "Repetidor" },
+    "Frost": { "emoji": "<:FROST:1395910178712588451>", "nome": "Frost" },
+    "Fulgurante": { "emoji": "<:Fulgurante:1395910176040812584>", "nome": "Fulgurante" },
+    "Scout": { "emoji": "<:SCOUT:1395910172580384828>", "nome": "Scout" }
+  }
+}
