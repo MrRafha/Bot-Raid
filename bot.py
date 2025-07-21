@@ -79,10 +79,13 @@ class RoleSelect(discord.ui.View):
 
 @bot.event
 async def on_ready():
-    await bot.tree.sync(guild=discord.Object(id=int(config["guild_id"])))
-    print(f'Bot online como {bot.user}')
+    try:
+        await bot.tree.sync()
+        print(f"✅ Comandos slash sincronizados globalmente como {bot.user}")
+    except Exception as e:
+        print(f"❌ Erro ao sincronizar comandos globais: {e}")
 
-@bot.tree.command(name="criar_raid", description="Cria uma raid no Albion", guild=discord.Object(id=int(config["guild_id"])))
+@bot.tree.command(name="criar_raid", description="Cria uma raid no Albion")
 @app_commands.describe(titulo="Título da raid", descricao="Descrição da raid", data="Data", horario="Horário")
 async def criar_raid(interaction: discord.Interaction, titulo: str, descricao: str, data: str, horario: str):
     cargo_permitido = discord.utils.get(interaction.guild.roles, name=config["permissao_criar_raid"])

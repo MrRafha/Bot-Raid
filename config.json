@@ -1,6 +1,6 @@
 {
   "token": "ENV_DISCORD_BOT_TOKEN",
-  "guild_id": 1359650048379584532,
+  "guild_id": 1366217568418791556,
   "permissao_criar_raid": "Raid Maker",
   "roles": {
     "MainTank": { "emoji":"<:MainTank:1395910048705675324>", "nome": "Main Tank" },
