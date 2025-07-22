@@ -27,7 +27,7 @@ Um bot personalizado para organizar raids com **funções, emojis e participaç�
 ### 🛠️ Instalação Local
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/MrRafha/Bot-Raid
 cd seu-repositorio
 pip install -r requirements.txt
 ```
