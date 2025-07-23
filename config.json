@@ -50,7 +50,8 @@
         "Silence": { "emoji": "<:Silence:1395910199294034010>", "nome": "Silence" },
         "quebrareinos": { "emoji": "<:QUEBRAREINOS:1395920798367219752>", "nome": "Quebra Reinos" },
         "incubus": { "emoji": "<:Incubus:1395910193413492818>", "nome": "Incubus" },
-        "crosta": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" }
+        "crosta": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" },
+        "Bruxo": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Bruxo" }
       },
       "Dps": {
         "Frost": { "emoji": "<:FROST:1395910178712588451>", "nome": "Frost" },
