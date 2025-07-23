@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 from threading import Thread
 from flask import Flask
-#a
+
 load_dotenv()
 
 with open('config.json', encoding='utf-8') as f:
@@ -28,8 +28,13 @@ class RoleSelect(discord.ui.View):
         self.selected_roles = set()
 
         all_groups = config["roles"][tipo]
+        total_items = 0
 
+        # Limitando o número de selects
         for group_name, group_roles in all_groups.items():
+            if total_items >= 4:
+                break  # Garante no máximo 4 selects para caber com o botão
+
             options = []
             for key, role in group_roles.items():
                 try:
@@ -41,14 +46,15 @@ class RoleSelect(discord.ui.View):
             select = discord.ui.Select(
                 placeholder=f"Selecione funções - {group_name}",
                 min_values=0,
-                max_values=min(25, len(options)),
+                max_values=len(options),
                 options=options,
                 custom_id=group_name
             )
             select.callback = self.select_callback
             self.add_item(select)
+            total_items += 1
 
-
+        # Botão sempre será o último (5º item)
         confirm_button = discord.ui.Button(label="Confirmar Seleção", style=discord.ButtonStyle.green)
         confirm_button.callback = self.confirm_callback
         self.add_item(confirm_button)
@@ -84,10 +90,16 @@ class RoleSelect(discord.ui.View):
         )
         embed.description = f"{raid['descricao']}\n\n📅 **Data:** {raid['data']}     ⏰ **Horário:** {raid['horario']}\n\n"
 
-        for role_id in self.selected_roles:
-            for group in config["roles"][self.tipo].values():
-                if role_id in group:
-                    role = group[role_id]
+        role_order = ["Tanks", "Healers", "Supports", "Dps", "scouts"]
+        roles_by_group = config["roles"][self.tipo]
+
+        for group in role_order:
+            if group not in roles_by_group:
+                continue
+            group_roles = roles_by_group[group]
+            for role_id in self.selected_roles:
+                if role_id in group_roles:
+                    role = group_roles[role_id]
                     embed.add_field(
                         name=f"{role['emoji']} {role['nome']} (0)",
                         value="(vazio)",
@@ -96,12 +108,16 @@ class RoleSelect(discord.ui.View):
 
         msg = await interaction.channel.send(embed=embed)
 
-        for role_id in self.selected_roles:
-            for group in config["roles"][self.tipo].values():
-                if role_id in group:
-                    await msg.add_reaction(group[role_id]["emoji"])
+        for group in role_order:
+            if group not in roles_by_group:
+                continue
+            group_roles = roles_by_group[group]
+            for role_id in self.selected_roles:
+                if role_id in group_roles:
+                    await msg.add_reaction(group_roles[role_id]["emoji"])
 
         await interaction.response.edit_message(content="Raid criada com sucesso!", view=None)
+
 
 @bot.event
 async def on_ready():
@@ -114,6 +130,7 @@ async def on_ready():
 
     except Exception as e:
         print(f"❌ Erro ao sincronizar comandos globais: {e}")
+
 
 @bot.tree.command(name="criar_raid", description="Cria uma raid PvP ou PvE")
 @app_commands.describe(
@@ -151,6 +168,7 @@ async def criar_raid(interaction: discord.Interaction, tipo: str, titulo: str, d
     view = RoleSelect(user_id=interaction.user.id, tipo=tipo)
     await interaction.followup.send("Selecione as funções desejadas:", view=view, ephemeral=True)
 
+
 @bot.event
 async def on_raw_reaction_add(payload: discord.RawReactionActionEvent):
     if payload.user_id == bot.user.id:
@@ -162,10 +180,7 @@ async def on_raw_reaction_add(payload: discord.RawReactionActionEvent):
 
     try:
         message = await channel.fetch_message(payload.message_id)
-        user = payload.member
-        if not user:
-            guild = bot.get_guild(payload.guild_id)
-            user = await guild.fetch_member(payload.user_id)
+        user = payload.member or await bot.get_guild(payload.guild_id).fetch_member(payload.user_id)
     except Exception as e:
         print(f"[Erro ao buscar mensagem ou membro] {e}")
         return
@@ -191,6 +206,7 @@ async def on_raw_reaction_add(payload: discord.RawReactionActionEvent):
                         embed.set_field_at(i, name=new_name, value=new_value)
                         await message.edit(embed=embed)
                         return
+
 
 @bot.event
 async def on_raw_reaction_remove(payload: discord.RawReactionActionEvent):
@@ -230,16 +246,14 @@ async def on_raw_reaction_remove(payload: discord.RawReactionActionEvent):
                         embed.set_field_at(i, name=new_name, value=new_value)
                         await message.edit(embed=embed)
                         return
-                    
+
+# Webserver para manter o bot online
 app = Flask('')
 
 @app.route('/')
 def home():
     return "Bot está online!"
 
-def run_web():
-    app.run(host='0.0.0.0', port=8080)
+Thread(target=lambda: app.run(host='0.0.0.0', port=8080)).start()
 
-# Inicia a thread do Flask
-Thread(target=run_web).start()
 bot.run(os.getenv("DISCORD_BOT_TOKEN"))
