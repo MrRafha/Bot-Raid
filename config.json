@@ -1,24 +1,63 @@
 {
   "token": "ENV_DISCORD_BOT_TOKEN",
   "guild_id": 1366217568418791556,
-  "permissao_criar_raid": "Raid Maker",
   "roles": {
-    "MainTank": { "emoji":"<:MainTank:1395910048705675324>", "nome": "Main Tank" },
-    "OffTankGolem": { "emoji":"<:OffTankGolem:1395910085871403120>", "nome": "Off Tank GOlem" },
-    "MainHeal": { "emoji": "<:MAINHEAL:1395910203282686113>", "nome": "Main Healer" },
-    "Silence": { "emoji": "<:Silence:1395910199294034010>", "nome": "Silence" },
-    "Paratempo": { "emoji": "<:Paratempo:1395910196605223062>", "nome": "Paratempo" },
-    "Incubus": { "emoji": "<:Incubus:1395910193413492818>", "nome": "Incubus" },
-    "Bruxo": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Bruxo" },
-    "QuebraReinos": { "emoji": "<:QUEBRAREINOS:1395920798367219752>", "nome": "Quebra Reinos" },
-    "RaizHealer": { "emoji": "<:RAIZHEALER:1395910186324987954>", "nome": "Raiz Healer" },
-    "Crosta": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" },
-    "Aguia": { "emoji": "<:AGUIA:1395910180931371008>", "nome": "Aguia" },
-    "Repetidor": { "emoji": "<:REPETIDOR:1395921503165616238>", "nome": "Repetidor" },
-    "Frost": { "emoji": "<:FROST:1395910178712588451>", "nome": "Frost" },
-    "Fulgurante": { "emoji": "<:Fulgurante:1395910176040812584>", "nome": "Fulgurante" },
-    "Scout": { "emoji": "<:SCOUT:1395910172580384828>", "nome": "Scout" },
-    "Prisma": { "emoji": "<:PRISMA:1397032258745008210>", "nome": "Prisma" },
-    "FURABRUMAS": { "emoji": "<:FURABRUMAS:1397032262079615039>", "nome": "Fura Brumas" }
+    "pvp": {
+      "grupo1": {
+        "Golem": { "emoji": "<:OffTankGolem:1395910085871403120>", "nome": "Golem" },
+        "1HMACE": { "emoji": "<:MACA:1397369889542504570>", "nome": "1H MACE" },
+        "HOJ": { "emoji": "<:HOJ:1397369892935569438>", "nome": "MÃO DA JUSTIÇA" },
+        "HEAVYMACE": { "emoji": "<:HEAVYMACE:1397369882529497139>", "nome": "HEAVY MACE" },
+        "ARCANE": { "emoji": "<:Silence:1395910199294034010>", "nome": "1H ARCANE" },
+        "GK": { "emoji": "<:GUARDABOSQUES:1397369879501475910>", "nome": "GUARDA BOSQUES" },
+        "martelo1h": { "emoji": "<:MainTank:1395910048705675324>", "nome": "MARTELO" },
+        "LOCUS": { "emoji": "<:LOCUS:1397369876888158349>", "nome": "LOCUS" },
+        "Paratempo": { "emoji": "<:Paratempo:1395910196605223062>", "nome": "Paratempo" },
+        "ENIGMATICO": { "emoji": "<:ENIGMATICO:1397369873495097414>", "nome": "Enigmatico" },
+        "arvore": { "emoji": "<:ENRAIZADO:1397369869837533224>", "nome": "rootbound" },
+        "SPIRIT": { "emoji": "<:CACA:1397369867203641385>", "nome": "espirit hunter" },
+        "jurador": { "emoji": "<:jurador:1397412814796361879>", "nome": "jurador" },
+        "LIFECURSE": { "emoji": "<:LIFECURSE:1397369863856459787>", "nome": "Execrado" },
+        "entalhada": { "emoji": "<:ENTALHADA:1397369860807327899>", "nome": "Entalhada" },
+        "Bruxo": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Chama Sombra" },
+        "Danação": { "emoji": "<:DAMN:1397369928239157438>", "nome": "Danação" },
+        "putrido": { "emoji": "<:PUTRIDO:1397375182137458799>", "nome": "Putrido" },
+        "CROSTA": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" }
+      },
+      "grupo2": {
+        "quedaSanta": { "emoji": "<:MAINHEAL:1395910203282686113>", "nome": "Queda Santa" },
+        "Fallen": { "emoji": "<:CORROMPIDO:1397369925571711046>", "nome": "Corrompido" },
+        "Pustulento": { "emoji": "<:PUSTULENTO:1397369922543161434>", "nome": "Pustulento" },
+        "Rampante": { "emoji": "<:RAMPANT:1397369918780870898>", "nome": "Rampante" },
+        "Astral": { "emoji": "<:ASTRAL:1397369914893013022>", "nome": "Astral" },
+        "QUEBRAREINOS": { "emoji": "<:QUEBRAREINOS:1395920798367219752>", "nome": "Quebra Reinos" },
+        "Segadeira": { "emoji": "<:SEGADEIRA:1397369912011526369>", "nome": "Segadeira" },
+        "Infinity": { "emoji": "<:INFINITY:1397369908831981751>", "nome": "Lamina da Infinidade" },
+        "Ursines": { "emoji": "<:URSINES:1397369906109878392>", "nome": "Ursines" },
+        "hellfire": { "emoji": "<:HELLF:1397369903341899906>", "nome": "Mãos infernais" },
+        "Cravadas": { "emoji": "<:CRAVADAS:1397369898216198244>", "nome": "Cravadas" }
+      }
+    },
+    "pve": {
+      "grupo1": {
+        "MainTank": { "emoji": "<:MainTank:1395910048705675324>", "nome": "Main Tank" },
+        "OffTankGolem": { "emoji": "<:OffTankGolem:1395910085871403120>", "nome": "Off Tank GOlem" },
+        "MainHeal": { "emoji": "<:MAINHEAL:1395910203282686113>", "nome": "Main Healer" },
+        "Silence": { "emoji": "<:Silence:1395910199294034010>", "nome": "Silence" },
+        "Paratempo": { "emoji": "<:Paratempo:1395910196605223062>", "nome": "Paratempo" },
+        "Incubus": { "emoji": "<:Incubus:1395910193413492818>", "nome": "Incubus" },
+        "Bruxo": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Bruxo" },
+        "QuebraReinos": { "emoji": "<:QUEBRAREINOS:1395920798367219752>", "nome": "Quebra Reinos" },
+        "RaizHealer": { "emoji": "<:RAIZHEALER:1395910186324987954>", "nome": "Raiz Healer" },
+        "Crosta": { "emoji": "<:CROSTA:1395910183598686329>", "nome": "Crosta" },
+        "Aguia": { "emoji": "<:AGUIA:1395910180931371008>", "nome": "Aguia" },
+        "Repetidor": { "emoji": "<:REPETIDOR:1395921503165616238>", "nome": "Repetidor" },
+        "Frost": { "emoji": "<:FROST:1395910178712588451>", "nome": "Frost" },
+        "Fulgurante": { "emoji": "<:Fulgurante:1395910176040812584>", "nome": "Fulgurante" },
+        "Scout": { "emoji": "<:SCOUT:1395910172580384828>", "nome": "Scout" },
+        "Prisma": { "emoji": "<:PRISMA:1397032258745008210>", "nome": "Prisma" },
+        "FURABRUMAS": { "emoji": "<:FURABRUMAS:1397032262079615039>", "nome": "Fura Brumas" }
+      }
+    }
   }
 }
