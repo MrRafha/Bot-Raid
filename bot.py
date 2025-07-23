@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 from threading import Thread
 from flask import Flask
-
+#a
 load_dotenv()
 
 with open('config.json', encoding='utf-8') as f:
