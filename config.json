@@ -6,8 +6,10 @@
       "Tanks": {
         "Golem": { "emoji": "<:OffTankGolem:1395910085871403120>", "nome": "Golem" },
         "1HMACE": { "emoji": "<:MACA:1397369889542504570>", "nome": "1H MACE" },
-        "HEAVYMACE": { "emoji": "<:HEAVYMACE:1397369882529497139>", "nome": "HEAVY MACE" },
-        "martelo1h": { "emoji": "<:MainTank:1395910048705675324>", "nome": "MARTELO" }
+        "HEAVYMACE": { "emoji": "<:HEAVYMACE:1397369882529497139>", "nome": "Maça Pesada" },
+        "martelo1h": { "emoji": "<:MainTank:1395910048705675324>", "nome": "MARTELO" },
+        "Hoj": { "emoji": "<:HOJ:1397369892935569438>", "nome": "Mão da justiça" },
+        "GK": { "emoji": "<:GUARDABOSQUES:1397369879501475910>", "nome": "GK" }
       },
       "Healers": {
         "quedaSanta": { "emoji": "<:MAINHEAL:1395910203282686113>", "nome": "Queda Santa" },
@@ -23,7 +25,10 @@
         "SPIRIT": { "emoji": "<:CACA:1397369867203641385>", "nome": "Caça espiritos" },
         "jurador": { "emoji": "<:jurador:1397412814796361879>", "nome": "jurador" },
         "LIFECURSE": { "emoji": "<:LIFECURSE:1397369863856459787>", "nome": "Execrado" },
-        "putrido": { "emoji": "<:PUTRIDO:1397375182137458799>", "nome": "Putrido" }
+        "putrido": { "emoji": "<:PUTRIDO:1397375182137458799>", "nome": "Putrido" },
+        "damnation": { "emoji": "<:DAMN:1397369928239157438>", "nome": "Damnation" },
+        "Sc": { "emoji": "<:BRUXO:1395910190221492234>", "nome": "Shadow caller" },
+        "entalhada": { "emoji": "<:ENTALHADA:1397369860807327899>", "nome": "Entalhada" }
       },
       "Dps": {
         "Astral": { "emoji": "<:ASTRAL:1397369914893013022>", "nome": "Astral" },
