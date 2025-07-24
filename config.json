@@ -60,6 +60,7 @@
         "prisma": { "emoji": "<:PRISMA:1397032258745008210>", "nome": "Prisma" },
         "repetidor": { "emoji": "<:REPETIDOR:1395921503165616238>", "nome": "Repetidor" },
         "aguia": { "emoji": "<:AGUIA:1395910180931371008>", "nome": "Águia" },
+        "foice": { "emoji": "<:foicecristal:1397730167698489354>", "nome": "Foice de cristal" },
         "Scout": { "emoji": "<:SCOUT:1395910172580384828>", "nome": "Scout" }
       },
       "scouts": {
